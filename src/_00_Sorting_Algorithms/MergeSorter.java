@@ -38,7 +38,7 @@ public class MergeSorter extends Sorter {
             //   set them equal to low, middle + 1, and low respectively
             int i = low;
             int j = middle + 1;
-            int k = high;
+            int k = low;
             //8. while i is less than or equal to middle
             //   and j is less than or equal to high
             while(i <= middle && j <= high) {
@@ -71,7 +71,7 @@ public class MergeSorter extends Sorter {
                 i ++;
                 display.updateDisplay();
             }
-		} 
+		} display.updateDisplay();
 	}
 
 }

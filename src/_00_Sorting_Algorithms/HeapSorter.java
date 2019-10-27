@@ -32,7 +32,7 @@ public class HeapSorter extends Sorter {
         	array[0] = array[i];
         	array[i] = temp;
             //12. call the heapSort method with i and 0
-        	heapSort(array, 0, i, display);
+        	heapSort(array, i, 0, display);
         }
 	}
 	

@@ -13,6 +13,7 @@ public class QuickSorter extends Sorter {
 	@Override
 	void sort(int[] array, SortingVisualizer display) {
 		//10. call the quickSort method with 0 and the length of the array minus one
+		quickSort(array, 0, array.length - 1, display);
 	}
 	
 	private void quickSort(int[] array, int low, int high, SortingVisualizer display) {
@@ -45,7 +46,7 @@ public class QuickSorter extends Sorter {
             	array[i] = array[j];
             	array[j] = temp;
             	i ++;
-            	j ++;
+            	j --;
             }
         }
         //8. if low is less than j, call the quickSort method using
@@ -58,6 +59,7 @@ public class QuickSorter extends Sorter {
         if(i < high) {
         	quickSort(array, i, high, display);
         }
+        display.updateDisplay();
         
 	}
 
